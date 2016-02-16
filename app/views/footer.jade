@@ -1,0 +1,18 @@
+footer
+    div.container-fluid
+        div.row
+            div.col-sm-4.information
+                h4 Information & Copywrite
+                div
+                    |People are innocent until proven guilty <br/>
+                    |This site is not serious <br/>
+                    |The information on this site may or may not be factual. There is no guarantee.
+            dov.col-sm-8.footer-top
+                div.topten
+                    h4 Top 10 leaderboard
+                    ul.list-inline.list-unstyled
+                        each booking, i in topTen
+                            li.pull-left
+                                - var tooltipText = "wins: " + booking.wins + " : losses: " + booking.losses;
+                                a(href='/detail/#{booking._id}', data-placement="top", data-toggle="tooltip", data-title="#{tooltipText}")
+                                    img(src="/images/mugs-400x500/" + booking.image)

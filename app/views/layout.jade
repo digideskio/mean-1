@@ -1,0 +1,12 @@
+doctype
+html
+    head
+        link(rel="stylesheet", href="/css/main.css")
+        script(src="/js/app.js")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    body(class=typeof templateClass === "undefined" ? "" : "dark")
+        div#wrap
+            include navbar
+            block content
+        div.footer
+            include footer

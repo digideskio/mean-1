@@ -1,0 +1,7 @@
+{
+  "name": "MEAN",
+  "version": "0.0.11",
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}

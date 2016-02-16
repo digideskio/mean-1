@@ -1,0 +1,26 @@
+extend ./layout.jade
+
+block content
+   div.top.container.panel
+      div.row
+         ul.list-group
+            each booking, i in bookings
+               li.list-group-item
+                  div.clearfix
+                     span.pull-left.top-index
+                        if count
+                           |#{count - i}
+                        else
+                           |#{i+1}
+                     div.pull-left.top-thumb
+                        a(href="/detail/#{booking._id}")
+                           img(src="/images/mugs-400x500/" + booking.image)
+                     div.top-body
+                        a(href="/detail/#{booking._id}")
+                           h5 #{booking.name}
+                        small
+                           if booking.arrestAge
+                              |Arrest age: #[strong #{booking.arrestAge}] <br/>
+                           |Wins: #[strong #{booking.wins}] Losses: #[strong #{booking.losses}] <br/>
+                           |Rating: #[strong #{booking.rating}]
+

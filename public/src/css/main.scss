@@ -1,0 +1,238 @@
+@import 'bootstrap';
+html{
+  height: 100%;
+}
+
+body {
+  background-color: #f5f6f7;
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+  margin: 0 auto -240px;
+  background-size: cover;
+
+  .dark & {
+    background-image: url('/images/detail-background.png');
+  }
+}
+
+#wrap:after {
+  height: 240px;
+  display: block;
+  content: "";
+}
+
+.footer {
+  min-height: 240px;
+  background: #ccc;
+  display: block;
+
+  .dark & {
+    background: transparent;
+    color: #fff;
+  }
+
+  .topten {
+    a {
+      width: 75px;
+      height: 94px;
+      display: block;
+    }
+    img{
+      width: 75px;
+    }
+  }
+}
+
+.navbar {
+  border-bottom: 1px solid #d1d4d7;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+  z-index: 1010;
+  border-radius: 0;
+  background-color: #fff;
+
+  .dark & {
+    background: #1d2d3d;
+
+    .nav > li {
+
+
+      & > a {
+        text-shadow: 0 1px 0 #000;
+        color: #a5b6c7;
+
+        &:hover {
+          color: #fff;
+          background-color: transparent;
+        }
+      }
+    }
+
+  }
+
+
+  .brand {
+    color: #333;
+    font-family: "Baskerville", "Baskerville Old Face", "Hoefler Text", "Garamond", "Times New Roman", serif;
+    font-size: 20px;
+    text-shadow: none;
+    display: block;
+    float: left;
+    padding: 3px 20px;
+    margin-left: -20px;
+    font-weight: 200;
+  }
+}
+
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 20px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media(max-width: 750px) {
+  .center-div {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+.battle {
+  .booking {
+
+    img {
+      margin-bottom: 10px;
+      padding: 4px;
+      border: 5px solid transparent;
+      background-color: #fff;
+      animation-duration: 1s;
+      animation-name: fadeInUp;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+      transition: 0.3s ease-in-out;
+      max-width: 100%;
+
+      &:hover {
+        box-shadow: 0 2px 8px rgba(0, 127, 255, 0.27), 0 0 40px rgba(0, 127, 255, 0.27) inset;
+        transition: 0.3s ease-in-out;
+        border: 5px solid #13c4a5;
+      }
+
+      @media(min-width: 970px) {
+        &.right {
+          float: left;
+          text-align: inherit;
+        }
+        &.left {
+          float: right;
+          text-align: inherit;
+        }
+      }
+
+    }
+
+    .booking-info {
+    }
+
+  }
+  .skank-button {
+    margin-top: 20px;
+  }
+}
+
+.detail {
+  color: #fff;
+
+  .detail-image {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .detail-stats {
+    margin:30px 0 30px 0;
+    padding: 20px 0 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    ul {
+      list-style-type: none;
+
+      li {
+        position: relative;
+        width: 33.3%;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        overflow: hidden;
+
+        &:first-child:after {
+          content: '';
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: 0;
+          margin-top: -27px;
+          width: 1px;
+          height: 55px;
+          background: rgba(255, 255, 255, 0.15);
+        }
+
+        &:last-child:before {
+          content: '';
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 0;
+          margin-top: -27px;
+          width: 1px;
+          height: 55px;
+          background: rgba(255, 255, 255, 0.15);
+        }
+
+        span {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 40px;
+          font-weight: 300;
+          line-height: 40px;
+        }
+      }
+
+    }
+  }
+}
+
+.top {
+  .list-group-item:hover {
+    background: #f1f5f9;
+  }
+
+  .top-index {
+    font-size: 28px;
+    font-weight: 200;
+    margin-top: 38px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .top-thumb img {
+    width: 100px;
+    margin-right: 10px;
+  }
+}
+

@@ -1,0 +1,37 @@
+extend ./layout.jade
+
+block content
+    div.detail.container
+        div.row
+            div.col-xs-4.detail-image
+                img(src="/images/mugs-400x500/#{booking.image}")
+            div.col-xs-8
+                h2= booking.name
+                if booking.arrestAge
+                    h4 Arrest age: #[strong #{booking.arrestAge}]
+                if booking.date
+                    h4 Arrest date: #[strong #{booking.date}]
+                if booking.gender
+                    h4 Gender: #[strong #{booking.gender}]
+                if booking.height
+                    h4 Height: #[strong #{booking.height}]
+                if booking.weight
+                    h4 Weight: #[strong #{booking.weight}]
+                if booking.charges
+                    h4 Charges
+                    ul
+                        each charge in booking.charges
+                            li #[strong #{charge}]
+
+        div.row
+            div.detail-stats
+                ul.list-inline
+                    li
+                        span #{booking.rating}
+                        |Elo rating
+                    li
+                        span #{booking.wins}
+                        |Wins
+                    li
+                        span #{booking.losses}
+                        |Losses

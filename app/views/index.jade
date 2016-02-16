@@ -1,0 +1,36 @@
+extend ./layout.jade
+
+block content
+   div.container
+      .row
+         .col-sm-12.battle
+            p.lead.text-center Click on the image. Select the hot!
+            div.col-sm-6
+               div.booking
+                  div.row
+                     div.col-sm-12
+                        a(href="/battle/#{booking0._id}/#{booking1._id}")
+                           img.left(src= "images/mugs-400x500/" + booking0.image)
+                  div.row
+                     div.col-sm-9.col-sm-push-3.booking-info.text-center
+                        a.booking-detail.lead(href="/detail/#{booking0._id}") #{booking0.name}
+            div.col-sm-6
+               div.booking
+                  div.row
+                     div.col-sm-12
+                        a(href="/battle/#{booking1._id}/#{booking0._id}")
+                           img.right(src= "images/mugs-400x500/" + booking1.image)
+                  div.row
+                     div.col-sm-9.booking-info.text-center
+                        a.booking-detail.lead(href="/detail/#{booking1._id}") #{booking1.name}
+            div.col-sm-12.text-center.skank-button
+               a(href="/")
+                  button(type="button", class="btn btn-default btn-info")
+                     span Ugly!!.
+
+
+
+
+
+
+
